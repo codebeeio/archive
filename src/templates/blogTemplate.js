@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from 'react-helmet'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -7,6 +8,9 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   return (
     <div>
+      <Helmet
+        title={`${frontmatter.title} - CodeBee`}
+      />
       <h1>{frontmatter.title}</h1>
       <p>Author: {frontmatter.authorUrl ? (
         <a href={frontmatter.authorUrl}>{frontmatter.author}</a>

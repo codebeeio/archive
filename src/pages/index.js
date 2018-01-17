@@ -1,8 +1,17 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 
 const IndexPage = () => (
   <div>
+    <Helmet
+      title="CodeBee"
+      meta={[
+        {
+          name: 'description', content: 'Connect with other developers and designers through tutorials, questions, and projects. All in one place.',
+        },
+      ]}
+    />
     <h1>Sorry, we're in hibernation.</h1>
     <p>CodeBee was released during the summer of 2015 as a way to connect developers and designers together through tutorials, questions, and projects.</p>
     <p>While everything was going great in the first few months, site activity soon died down. We attribute this to our lack of effort in pushing out updates and trying to grow the community.</p>
